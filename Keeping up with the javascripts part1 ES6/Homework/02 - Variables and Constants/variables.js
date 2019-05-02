@@ -49,7 +49,7 @@ function MarriedName(firstName, oldFamilyName, newFamilyName, married) {
 
 MarriedName("Rachael", "Smith", "Jones", false);
 
-/* In the code below if let is used instead of var for the incrementor then an error is returned as the second console.log(i) is outside of the let variable block scope.  var is function scoped and is seen by the second console.log(i) */
+/* In the code below if let is used instead of var for the loop counter then an error is returned as the second console.log(i) is outside of the let variable block scope.  var is function scoped and is seen by the second console.log(i) */
 
 function increment() {
     for (var i = 0; i < 10; i++) {
