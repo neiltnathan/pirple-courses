@@ -193,3 +193,6 @@ const timeAdder = (value1 = 60, label1 = "minutes", value2 = 60, label2 = "minut
 }
 
 timeAdder(60, "minutes", 540, "seconds");
+timeAdder(5, "days", 25, "hours");
+timeAdder(20, "hours", 5, "hours");
+timeAdder(20, "hours", 4, "hours");
