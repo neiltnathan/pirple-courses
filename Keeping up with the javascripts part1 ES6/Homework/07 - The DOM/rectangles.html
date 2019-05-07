@@ -1,0 +1,182 @@
+<!--
+Homework Assignment #7: The DOM
+
+Details:
+
+Create a very simple webpage, displaying some of your favorite colors. Use HTML, CSS and Javascript.
+
+1. The top of the page should include a header <h1> tag, with a name for your page, and then an <h2> tag with a
+        description of what's on the page.
+
+        2. Further down the page you should draw 10 rectangles, of any size you wish, and give them each a unique
+        hex-code so they all appear as different colors. Here's a color-picker that might help.
+
+        3. Below each rectangles, list the hex code (in plain text).
+
+        4. Give all of the rectangles the same class, but make sure each rectangle has a unique ID.
+
+        5. Wrap all of the rectangles in an containing element ( a <div> ) and give that element the id
+            "rectangleWrapper". Now give that element 50 pixels of padding on its top, right and left sides. But add
+            zero padding to the bottom.
+
+            6. When the page loads, console.log the messages "Here are the rectangle IDs" and then console.log all the
+            rectangles' IDs, one at a time.
+
+            7. In the
+
+            <head> of the document, add a <title> tag that matches the text in the <h1> you added in step 1.
+                       -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rectangles</title>
+</head>
+
+<style>
+    .rectangleWrapper {
+        padding: 50px 50px 0 50;
+    }
+
+    .rectangles {
+        width: 200px;
+        height: 200px;
+        margin: 20px 20px 5px 20px;
+
+    }
+
+    .recwrap {
+        display: inline-block;
+    }
+
+    h1,
+    h2,
+    p {
+        font-family: tahoma;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #rectangle1 {
+        background-color: #FF5233;
+    }
+
+    #rectangle2 {
+        background-color: #FFB833;
+    }
+
+    #rectangle3 {
+        background-color: #FFF633;
+    }
+
+    #rectangle4 {
+        background-color: #BBFF33;
+    }
+
+    #rectangle5 {
+        background-color: #33FF64;
+    }
+
+    #rectangle6 {
+        background-color: #33F3FF;
+    }
+
+    #rectangle7 {
+        background-color: #3399FF;
+    }
+
+    #rectangle8 {
+        background-color: #5E33FF;
+    }
+
+    #rectangle9 {
+        background-color: #C133FF;
+    }
+
+    #rectangle10 {
+        background-color: #FF3390;
+    }
+</style>
+
+<body onload="onPageLoad()">
+    <h1>Rectangles</h1>
+    <h2>Rectangles of different colors</h2>
+
+    <div id="rectangleWrapper">
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle1"></div>
+            <p>#FF5233</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle2"></div>
+            <p>#FFB833</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle3"></div>
+            <p>#FFF633</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle4"></div>
+            <p>#BBFF33</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle5"></div>
+            <p>#33FF64</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle6"></div>
+            <p>#33F3FF</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle7"></div>
+            <p>#3399FF</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle8"></div>
+            <p>#5E33FF</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle9"></div>
+            <p>#C133FF</p>
+        </div>
+
+        <div class="recwrap">
+            <div class="rectangles" id="rectangle10"></div>
+            <p>#FF3390</p>
+        </div>
+
+    </div>
+
+    <script>
+
+        function onPageLoad() {
+            console.log("Here are the rectangle IDs");
+
+            //creates a const containing a nodelist containing all the div elements with class .rectangles
+            const recs = document.querySelectorAll(".rectangles")
+
+            //loops through each of the nodelist (div) elements & console logs the #id
+            for (let prop of recs) {
+                console.log(prop.id)
+            }
+        }
+    </script>
+
+</body>
+
+</html>
