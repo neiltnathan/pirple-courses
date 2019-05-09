@@ -1,0 +1,64 @@
+h1 {
+    font-family: tahoma;
+    font-size: 30px;
+}
+
+.board-container {
+    width: 500px;
+    margin: 0 auto;
+    font-family: tahoma;
+    font-size: 95px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    justify-content: center;
+}
+
+.board-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#t-left {
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+
+#t-middle {
+    border-bottom: 2px solid;
+}
+
+#t-right {
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+}
+
+#m-left {
+    border-right: 2px solid;
+}
+
+/*#m-middle {
+    border-bottom: 2px solid;
+} */
+
+#m-right {
+    border-left: 2px solid;
+}
+
+#b-left {
+    border-top: 2px solid;
+    border-right: 2px solid;
+}
+
+#b-middle {
+    border-top: 2px solid;
+}
+
+#b-right {
+    border-left: 2px solid;
+    border-top: 2px solid;
+}
