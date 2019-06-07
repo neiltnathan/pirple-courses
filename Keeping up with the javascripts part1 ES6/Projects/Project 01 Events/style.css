@@ -1,0 +1,379 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    color: #6d5d4b;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.header {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.header-title {
+    font-size: 10rem;
+    text-align: center;
+    margin-top: -5rem;
+}
+
+.login-container,
+.todo-container,
+.signup-container,
+.accountdetails-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+
+
+input,
+label {
+    display: block;
+}
+
+.signupHeader,
+.loginHeader,
+.dashboardHeader,
+.accountDetailsHeader {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.signup-container label,
+.login-container label,
+.dashboard-container label,
+.accountdetails-container label {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: inherit;
+}
+
+.signup-container input,
+.login-container input,
+.dashboard-container input,
+.accountdetails-container input {
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    border-radius: 2px;
+    border: 1px solid #6d5d4b;
+    padding: 0.5rem 1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-family: "Raleway", sans-serif;
+    color: #6d5d4b;
+    font-weight: 400;
+}
+
+#todoListTitle {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+#fullNameDashboard {
+
+    margin-bottom: 2rem;
+
+}
+
+.termsWrap input,
+.termsWrap label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    vertical-align: middle;
+}
+
+#emailDashboard {
+    margin: 0 0 2rem 0;
+}
+
+
+.termsWrap label {
+    margin-left: -450px
+}
+
+
+
+
+.dashboard-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 45vw;
+    margin-bottom: 20rem;
+    display: grid;
+
+    grid-gap: 20px;
+    grid-template-areas:
+        "header"
+        /* "account-details" */
+        "side-nav"
+        /* "nav" */
+        "content"
+
+}
+
+@media(min-width: 1100px) {
+    .dashboard-container {
+        width: 70vw;
+        grid-template-columns: 2fr 3fr;
+
+        grid-template-areas: "header header header header header"
+            /* "account-details content content content" */
+            "side-nav side-nav content content content"
+            /* "nav content content content" */
+
+
+    }
+
+
+}
+
+#dashboard {
+    height: 65vh;
+}
+
+
+
+/* button styling */
+.button-container {
+    margin: 0 auto;
+    width: 450px;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+
+button {
+    display: inline-block;
+    color: #0099CC;
+    background: transparent;
+    border-radius: 6px;
+    border: 2px solid #008CBA;
+    color: inherit;
+    padding: 12px 28px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2rem 0 2rem 0;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: transparent;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+.dashboardCreateAddButton {
+
+    padding: 3px 9px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 1rem;
+    margin: 0 1rem 2rem 0;
+
+
+}
+
+#dashboardCreateListButton {
+
+    margin: 2rem 0 2rem 0;
+
+}
+
+/* Invalid  field styling */
+
+#email:invalid {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+#email:focus:invalid {
+    outline: none;
+}
+
+/* This is the style of our error messages */
+.error {
+    width: 100%;
+    padding: 0;
+
+    font-size: 1.5rem;
+    color: red;
+    /* background-color: #900; */
+    border-radius: 0 0 5px 5px;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.error.active {
+    padding: 0.3em;
+}
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+/*.visible {
+    display: block;
+}
+
+*/
+
+
+
+
+
+
+
+.dashboardHeader {
+    grid-area: header;
+    margin-bottom: -2rem;
+}
+
+/*
+.account-details {
+    grid-area: account-details;
+
+
+}
+
+.todo-container {
+    grid-area: content;
+}
+
+.todo-nav {
+    grid-area: nav;
+
+}
+
+.footer {
+    grid-area: footer;
+}
+*/
+
+
+
+
+.todo-content,
+.side-nav {
+    border: 1px solid;
+    padding: 3rem;
+    border-radius: 6px;
+
+
+
+}
+
+.todo-nav {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.todoListContent {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+
+ul {
+    list-style-type: none;
+
+}
+
+li {
+    padding: 0.1rem;
+}
+
+a {}
+
+a:link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "Raleway", sans-serif;
+    color: #6d5d4b;
+    font-weight: 400;
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+input.listItems {
+    width: 20px;
+}
+
+#todoListContentItems .listItems {
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+
+}
+
+#todoListContentItems {
+
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+}
+
+#todoListContentItems .completed {
+    text-decoration: line-through;
+}
+
+.messagealert {
+    border: 0.1rem solid pink;
+    width: 95%;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.messagealert p {
+    color: red;
+    text-align: center;
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
