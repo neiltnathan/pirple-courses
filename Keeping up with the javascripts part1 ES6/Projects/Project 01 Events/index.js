@@ -20,8 +20,10 @@ function hash(algo, str) {
 /*
 hash('SHA-256', 'Hello').then(hashed => {
     console.log(hashed); // ArrayBuffer
+
     console.log(hex(hashed)); // 185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969
     console.log(encode64(hashed)); // GF+NsyJx/iX1Yab8k4suJkMG7DBO2lGAB9F2SCY4GWk=
+
 });
 */
 
@@ -634,10 +636,8 @@ todoListTitleFocus.addEventListener(
 
     //clears message alert box
     let element = document.getElementById("todoListTitlemessageBox");
-    let elementParent = document.getElementById("todoListTitle");
     if (element !== null) {
       element.parentNode.removeChild(element);
-      elementParent.style.borderColor = "#6d5d4b";
     }
     document.getElementById("dashboardButton").disabled = false;
     // editMode = false;
@@ -655,10 +655,8 @@ todoListItemFocus.addEventListener(
 
     //clears message alert box
     let element = document.getElementById("todoListItemmessageBox");
-    let elementParent = document.getElementById("todoListItem");
     if (element !== null) {
       element.parentNode.removeChild(element);
-      elementParent.style.borderColor = "#6d5d4b";
     }
     document.getElementById("dashboardButton").disabled = false;
     document.getElementById("dashboardAddItemButton").disabled = false;
@@ -676,7 +674,6 @@ emailFocus.addEventListener(
 
     //clears message alert box
     let element = document.getElementById("messageBox");
-
     if (element !== null) {
       element.parentNode.removeChild(element);
     }
@@ -855,7 +852,7 @@ todoListTitleName.addEventListener("blur", event => {
         MessageAlert(element, text, "todoListTitle");
 
         // document.getElementById("todoListTitle").focus();
-        return;
+        return false;
       }
 
       if (todoList.trim().length < 5) {
@@ -1078,11 +1075,9 @@ dashboardCancelNewListNameButton.addEventListener(
     document.getElementById("dashboardButton").disabled = false;
 
     //clears message alert box
-    let element = document.getElementById("todoListTitlemessageBox");
-    let elementParent = document.getElementById("todoListTitle");
+    let element = document.getElementById("messageBox");
     if (element !== null) {
       element.parentNode.removeChild(element);
-      elementParent.style.borderColor = "#6d5d4bw";
     }
 
     document.getElementById("todoListTitle2").classList.add("hidden");
@@ -1236,7 +1231,7 @@ dashboardSaveNewListNameButton.addEventListener("click", function(event) {
     const text =
       "The New To Do List already exists, input a new to do list name";
 
-    MessageAlert(element, text, "todoListTitle");
+    MessageAlert(element, text);
   }
 });
 
