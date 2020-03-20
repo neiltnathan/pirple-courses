@@ -518,7 +518,7 @@ dashboard.addEventListener("click", function(event) {
     const text =
       "The To Do List Title Name field requires 3 characters or more";
 
-    MessageAlert(element, text);
+    MessageAlert(element, text, "todoListTitle");
 
     return;
   }
@@ -1155,7 +1155,7 @@ dashboardSaveNewListNameButton.addEventListener("click", function(event) {
     const element = document.getElementById("todoListTitle");
     const text = "The To Do List Name field requires 5 characters or more";
 
-    MessageAlert(element, text);
+    MessageAlert(element, text, "todoListTitle");
 
     return;
   }
