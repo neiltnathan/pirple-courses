@@ -1075,7 +1075,7 @@ dashboardCancelNewListNameButton.addEventListener(
     document.getElementById("dashboardButton").disabled = false;
 
     //clears message alert box
-    let element = document.getElementById("messageBox");
+    let element = document.getElementById("todoListTitlemessageBox");
     if (element !== null) {
       element.parentNode.removeChild(element);
     }
@@ -1125,7 +1125,7 @@ dashboardSaveNewListNameButton.addEventListener("click", function(event) {
   document.getElementById("dashboardButton").disabled = false;
 
   //clears message alert box
-  let element = document.getElementById("messageBox");
+  let element = document.getElementById("todoListTitlemessageBox");
   if (element !== null) {
     element.parentNode.removeChild(element);
   }
@@ -1231,7 +1231,7 @@ dashboardSaveNewListNameButton.addEventListener("click", function(event) {
     const text =
       "The New To Do List already exists, input a new to do list name";
 
-    MessageAlert(element, text);
+    MessageAlert(element, text, "todoListTitle");
   }
 });
 
